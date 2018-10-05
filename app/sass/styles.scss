@@ -1,0 +1,96 @@
+/*
+Theme Name: Silicon Harlem Conference
+
+Author: Ben Erwin, Powersimple, LLC
+Author URI: https://Powersimple/
+Description: 
+Text Domain: siliconharlemconf
+
+DO NOT EDIT IN STYLE.CSS
+*/
+/*
+    PUT YOUR COLOR PALETTE HERE:
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900');
+
+
+@import "partials/template";
+
+@import "partials/header";
+@import "partials/main";
+@import "partials/particles";
+.panel-group {
+    margin-bottom: 0px;
+}
+.session-time{
+    float: right;
+    margin-right: 2em;
+    margin-top: -17px;
+    text-transform: none;
+    color:#fff !important;
+}
+.panel-default>.panel-heading{
+    color:#ff0;
+    background: linear-gradient(to top, #8c002e 0%,#a90329 51%,#c40327 100%);
+    border-color: #8c002e;
+    h4 a, h4 a.collapsed{
+      
+            color:#fff !important;
+        
+    }
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body{
+    border-color: #8c002e;
+}
+.speaker-listing{
+    border-top:1px dashed #ccc;
+    padding-top:25px;
+    margin-top:5px;
+    div{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .speaker-image{
+        border-bottom-left-radius: 25%;
+        overflow: hidden;
+        border-bottom-right-radius: 48%;
+        border: 6px solid #8c002e;
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        
+        border-top-left-radius: 29%;
+        border-top-right-radius: 11%;
+    }
+    .speaker-info{
+        padding:0px 10px;
+        vertical-align: top;
+        width:25%;
+        strong{
+            font-weight: 900;
+            font-size:150%;
+            border-bottom:1px solid #333;
+        }
+        .fa{
+            border-radius: 50%;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            padding: 3px 4px;
+        
+        }
+        a.fa:hover{
+            color:#000;
+        }
+    }
+    .speaker-short-bio{
+        float:right;
+        width:40%;
+
+    }
+}
+
