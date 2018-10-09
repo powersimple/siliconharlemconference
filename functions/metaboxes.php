@@ -86,6 +86,32 @@ function setSessionSpeakers( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'setSessionSpeakers' );
 
+function setSessionSponsors( $meta_boxes ) {
+	$prefix = '';
+
+	$meta_boxes[] = array(
+		'id' => 'session-sponsors',
+		'title' => esc_html__( 'Sponsors', 'metabox-online-generator' ),
+		'post_types' => array('session' ),
+		'context' => 'side',
+		'priority' => 'default',
+		'autosave' => 'false',
+		'fields' => array(
+			array(
+				'id' =>  'sponsors',
+				'type' => 'post',
+				'name' => esc_html__( 'Sponsors', 'metabox-online-generator' ),
+				'post_type' => 'sponsor',
+				'field_type' => 'checkbox_list',
+			),
+		),
+	);
+
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'setSessionSponsors' );
+
+
 
 function speaker_info( $meta_boxes ) {
 	$prefix = 'prefix-';
@@ -114,9 +140,14 @@ function speaker_info( $meta_boxes ) {
 				'name' => esc_html__( 'Website', 'metabox-online-generator' ),
 			),
 			array(
+				'id' => 'speaker_wikipedia',
+				'type' => 'url',
+				'name' => esc_html__( 'Wikipedia URL', 'metabox-online-generator' ),
+			),
+			array(
 				'id' => 'speaker_linkedin',
 				'type' => 'url',
-				'name' => esc_html__( 'LinkedIN URL', 'metabox-online-generator' ),
+				'name' => esc_html__( 'LinkedIn URL', 'metabox-online-generator' ),
 			),
 			array(
 				'id' => 'speaker_twitter',
@@ -138,11 +169,51 @@ function speaker_info( $meta_boxes ) {
 				'type' => 'url',
 				'name' => esc_html__( 'Instagram URL', 'metabox-online-generator' ),
 			),
+			
 		),
 	);
 
 	return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'speaker_info' );
+
+
+function setSponsors( $meta_boxes ) {
+	$prefix = '';
+
+	$meta_boxes[] = array(
+		'id' => 'sponsors',
+		'title' => esc_html__( 'Sponsor Info', 'metabox-online-generator' ),
+		'post_types' => array('sponsor' ),
+		'context' => 'side',
+		'priority' => 'default',
+		'autosave' => 'false',
+		'fields' => array(
+			array(
+				'id' => 'sponsor-url',
+				'type' => 'url',
+				'name' => esc_html__( 'Sponsor URL', 'metabox-online-generator' ),
+				'post_type' => 'sponsor'
+			),
+			array(
+				'id' => $prefix . 'sponsor_level',
+				'name' => esc_html__( 'Sponsorship Level', 'metabox-online-generator' ),
+				'type' => 'select',
+				'placeholder' => esc_html__( 'Select Level', 'metabox-online-generator' ),
+				'options' => array(
+					'Terrabit' => 'Terrabyte Sponsor',
+					'Gigabit' => 'Gigabit',
+					'Megabit' => 'Megabit',
+					'Community' => 'Community Stakeholder',
+					'After Party' => 'After Party',
+				),
+			),
+		),
+	);
+
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'setSponsors' );
+
 
 ?>

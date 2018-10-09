@@ -12,26 +12,51 @@ DO NOT EDIT IN STYLE.CSS
     PUT YOUR COLOR PALETTE HERE:
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,900');
 
 
 @import "partials/template";
 
 @import "partials/header";
 @import "partials/main";
+@import "partials/speakers";
+@import "partials/slick";
+@import "partials/lava";
 @import "partials/particles";
+.caption-content a.btn{
+    font-size:1vw;
+    text-shadow: 1px 1px #333;
+    @media(max-width:767px){
+        max-width:90%;
+        word-wrap: break-word;
+    }
+}
 .panel-group {
     margin-bottom: 0px;
 }
-.session-time{
+.session-time, .mobile-sesion.time{
     float: right;
     margin-right: 2em;
     margin-top: -17px;
     text-transform: none;
     color:#fff !important;
+    @media(max-width: 767px){
+        display:none;
+    }
 }
+.mobile-session-time{
+    display: block;
+    text-align: center;
+    margin:0px auto;
+    font-weight:900;
+    @media(min-width: 768px){
+        display:none;
+    }
+}
+
+
 .panel-default>.panel-heading{
-    color:#ff0;
+    color:#ccc;
     background: linear-gradient(to top, #8c002e 0%,#a90329 51%,#c40327 100%);
     border-color: #8c002e;
     h4 a, h4 a.collapsed{
@@ -39,58 +64,33 @@ DO NOT EDIT IN STYLE.CSS
             color:#fff !important;
         
     }
+    .speaker-name{
+        color:#ccc;
+    }
 }
 
 .panel-default>.panel-heading+.panel-collapse>.panel-body{
     border-color: #8c002e;
 }
-.speaker-listing{
-    border-top:1px dashed #ccc;
-    padding-top:25px;
-    margin-top:5px;
-    div{
-        display: inline-block;
-        vertical-align: top;
-    }
-    .speaker-image{
-        border-bottom-left-radius: 25%;
-        overflow: hidden;
-        border-bottom-right-radius: 48%;
-        border: 6px solid #8c002e;
-        display: inline-block;
-        width: 150px;
-        height: 150px;
-        display: inline-block;
-        
-        border-top-left-radius: 29%;
-        border-top-right-radius: 11%;
-    }
-    .speaker-info{
-        padding:0px 10px;
-        vertical-align: top;
-        width:25%;
-        strong{
-            font-weight: 900;
-            font-size:150%;
-            border-bottom:1px solid #333;
-        }
-        .fa{
-            border-radius: 50%;
-            text-align: center;
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-            padding: 3px 4px;
-        
-        }
-        a.fa:hover{
-            color:#000;
-        }
-    }
-    .speaker-short-bio{
-        float:right;
-        width:40%;
-
+.panel-body{
+    p{
+        font-size:120%;
+        padding-right:20px;
+       }
+}
+.session-sponsors{
+    display:table;
+    padding-left:1%;
+    width: 100%;
+}
+.session-sponsor{
+    display: table-cell;
+    width:20%;
+    padding-right:1%;
+    text-align: center;
+    img{
+        border-radius:50%;
     }
 }
+
 

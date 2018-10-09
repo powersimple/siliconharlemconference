@@ -36,15 +36,15 @@ class onepage_menu extends WP_Widget {
 
 
 
-     if ( ! empty( $title ) )
-    
-        echo $args['before_title'] . $title . $args['after_title'];
+        if ( ! empty( $title ) )
         
-        // This is where you run the code and display the output
-        echo __( '', 'boilerplate' );
-        echo $args['after_widget'];
-    }
+            echo $args['before_title'] . $title . $args['after_title'];
             
+            // This is where you run the code and display the output
+            echo __( '', 'boilerplate' );
+            echo $args['after_widget'];
+        }
+                
     // Widget Backend 
     public function form( $instance ) {
         if ( isset( $instance[ 'title' ] ) ) {

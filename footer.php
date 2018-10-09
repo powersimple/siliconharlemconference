@@ -41,24 +41,24 @@
       </div>
       <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
  
-</main><!--main-->
+</main>
     
 
 
 
 <?php wp_footer(); ?>
-<script src="<?=get_stylesheet_directory_uri()?>/assets/lib/jquery/dist/jquery.js"></script>
-    <script src="<?=get_stylesheet_directory_uri()?>/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri()?>/assets/lib/jquery/dist/jquery.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri()?>/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
      
     
  
 
 
     
-    <script src="<?=get_stylesheet_directory_uri()?>/vendor.min.js"></script>
-    <script src="<?=get_stylesheet_directory_uri()?>/assets/js/plugins.js"></script>
-    <script src="<?=get_stylesheet_directory_uri()?>/assets/js/main.js"></script>
-    <script src="<?=get_stylesheet_directory_uri()?>/main.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri()?>/vendor.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri()?>/assets/js/plugins.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri()?>/assets/js/main.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri()?>/main.min.js"></script>
 
 </body>
 </html>

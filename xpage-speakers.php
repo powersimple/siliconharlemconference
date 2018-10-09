@@ -21,11 +21,11 @@ get_header();
         ?>
 
           
-            <li class="bg-dark-30 bg-dark" style="background-image:url(<?=$src?>);">
+            <li class="bg-dark-30 bg-dark" style="background-image:url(<?php echo $src?>);">
               <div class="titan-caption">
                 <div class="caption-content">
                   <div class="font-alt mb-30 titan-title-size-2">RE/THINK</div>
-                  <div class="font-alt mb-40 titan-title-size-4"><?=$title?></div><a class="section-scroll btn btn-border-w btn-round" href="#about"><?=$caption?></a>
+                  <div class="font-alt mb-40 titan-title-size-4"><?php echo $title?></div><a class="section-scroll btn btn-border-w btn-round" href="#about"><?php echo $caption?></a>
                 </div>
               </div>
             </li>
@@ -42,7 +42,7 @@ $pages = get_home_children();
 foreach($pages as $key => $value){
   extract((array)$value);
   ?>
-      <section class="module" id="<?=$slug?>">
+      <section class="module" id="<?php echo $slug?>">
           <div class="container">
             <?php
             if(file_exists (get_stylesheet_directory()."/page-$slug.php") ){
@@ -51,8 +51,8 @@ foreach($pages as $key => $value){
             ?>
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="module-title font-alt"><?=$title?></h2>
-                <div class="module-subtitle font-serif large-text"><?=do_shortcode(wpautop($content))?></div>
+                <h2 class="module-title font-alt"><?php echo $title?></h2>
+                <div class="module-subtitle font-serif large-text"><?php echo do_shortcode(wpautop($content))?></div>
               </div>
             </div>
             <div class="row">
