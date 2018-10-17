@@ -23,7 +23,7 @@
                     
                     <div class="panel-body">
                         <?php
-                        displaySpeaker(getSpeaker(get_the_id()),"medium","long");
+                       echo the_content();
                         ?>
                     
                     

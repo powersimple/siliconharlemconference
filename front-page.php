@@ -41,7 +41,7 @@ get_header();
 
         
       <?php
- require_once('lava.html');
+ //require_once('lava.html');
 $pages = get_home_children();
 foreach($pages as $key => $value){
   extract((array)$value);
@@ -64,13 +64,26 @@ foreach($pages as $key => $value){
                 <div class="panel-body"><?php echo wpautop($content);?></div>
               </div>
             </div>
-           
+            
             <?php 
               } 
             ?>
+
           </div>
+         
+           <?php
+          }
+          ?>
         </section>
-        <hr class="divider-w">
+        <?php 
+          
+          if(trim(@$section_foot) != ''){
+            ?><div class="section-foot">
+              <img  src="<?php echo getThumbnail($section_foot,"Full");?>">
+
+        </div>
+       
+
 <?php
     }
   }

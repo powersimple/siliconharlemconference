@@ -10,7 +10,8 @@
 					"ID"=>$value->ID,
 					"slug"=>$value->post_name,
 					"title"=>$value->post_title,
-					"content"=>$value->post_content
+					"content"=>$value->post_content,
+					"section_foot"=>get_post_meta($value->ID,"section_foot",true)
 					)
 				);
 		}

@@ -2,7 +2,11 @@
  <div class="panel-group" id="accordion">
 <?php
     $sessions = getSessions($id);
-  
+    $speaker_session = array();
+    global $speaker_session;
+
+        
+
     foreach ($sessions as $key => $value) {
         extract((array) $value);
         $speaker_list = speakerList($speakers);
@@ -25,7 +29,8 @@
                       }
 
                     foreach($speaker_list as $key=>$speaker){
-                     
+                      print $id = $speaker['id'];
+                     $speaker_session[$id] = $title;
                       if(($key == count($speaker_list)-1) && ($key != 0)){
                         print " and ";
                       } else if($key == 0){

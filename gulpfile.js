@@ -1,4 +1,4 @@
-var localhost = 'http://siliconharlemconf..192.168.1.12.xip.io:8886' // SET local dev url here
+var localhost = 'http://siliconharlemconf..192.168.1.245.xip.io:8886' // SET local dev url here
 
 
 var gulp = require('gulp'),

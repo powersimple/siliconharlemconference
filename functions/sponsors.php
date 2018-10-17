@@ -1,10 +1,23 @@
 <?php
     function displaySponsors($sponsors){
-       
+        $count = count($sponsors);
+        $grid = '';
+        if($count == 4){
+            $grid = 'col-sm-6 col-md-3 col-lg-3';
+        } else if($count == 3){
+            $grid = 'col-sm-6 col-md-4 col-lg-4';
+
+        } else {
+            $grid = 'col-md-6 col-lg-6';
+
+        }
+
+
+
         foreach($sponsors as $key => $sponsor){
             extract( $sponsor);
             //var_dump($sponsor);
-            print '<div class="col-sm-6 col-md-3 col-lg-3">';
+            print '<div class="'.$grid.' sponsor '.strtolower($sponsor_level).'">';
             $src= getThumbnail($thumbnail,"Full");
             print '<a href="'.$sponsor_url.'">';
             if($src == ''){
@@ -16,6 +29,7 @@
             print '</a></div>';
 
         }
+        
     }
     function getSponsorLevel($level){
         global $wpdb;
@@ -39,6 +53,7 @@
                 "id" => $ID,
                 "sponsor_name" =>$post_title,
                 "sponsor_url"=>get_post_meta($ID,"sponsor-url",true),
+                "sponsor_level"=>get_post_meta($ID,"sponsor_level",true),
                 "thumbnail" => get_post_thumbnail_id($ID)
             ));
 
@@ -70,7 +85,7 @@
             
             
             "sponsor_url" => get_post_meta($sponsor_id,"sponsor-url",true),
-
+            "sponsor_level" => get_post_meta($sponsor_id,"sponsor_level",true),
             "thumbnail" => get_post_thumbnail_id($ID),
         );
         
@@ -83,9 +98,9 @@
          $src= getThumbnail($thumbnail,"thumbnail");
         
     
-        print '<a href="'.$sponsor_url.'" target="blank">';
+     //   print '<a class="sponsor '.strtolower($sponsor_level).'" href="'.$sponsor_url.'" target="blank">';
         if($src != ''){
-            print '<img src="'.$src.'" alt="'.$sponsor_name.'">';
+            print '<img class="sponsor '.strtolower($sponsor_level).'" src="'.$src.'" alt="'.$sponsor_name.'">';
         } else {
             print $sponsor_name;
         }

@@ -57,16 +57,17 @@
    
     <link href="<?php echo get_stylesheet_directory_uri();?>/assets/lib/animate.css/animate.css" rel="stylesheet">
     <link href="<?php echo get_stylesheet_directory_uri();?>/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri();?>/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
     <link href="<?php echo get_stylesheet_directory_uri();?>/assets/lib/flexslider/flexslider.css" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri();?>/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="]<?php echo get_stylesheet_directory_uri();?>/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri();?>/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri();?>/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+
     <!-- Main stylesheet and color file-->
     <link href="<?php echo get_stylesheet_directory_uri();?>/style.css" rel="stylesheet">
-    <link id="color-scheme" href="<?php echo get_stylesheet_directory_uri();?>/assets/css/colors/default.css" rel="stylesheet">
 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css">
 <script>
     // Wordpress PHP variables to render into JS at outset.
     var active_id = <?php echo $post->ID?>;
@@ -88,7 +89,7 @@
       <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand header-logo" href="/"><?php dynamic_sidebar( 'header-logo' ); ?></a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand header-logo" href="//siliconharlem.net"><?php dynamic_sidebar( 'header-logo' ); ?></a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -97,3 +98,4 @@
           </div>
         </div>
       </nav>
+    

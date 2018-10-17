@@ -33,10 +33,20 @@
 			return $speaker;
 
 		}
-		function displaySpeaker($speaker_data,$media_size,$context="none"){
+		function displaySpeaker($speaker_data,$media_size,$context="none",$session=''){
 			extract($speaker_data);
 			$src= getThumbnail($thumbnail,$media_size);
-			print '<div class="speaker-short-bio">';
+			if($context=="long"){
+				print '<div class="speaker-long-bio">';
+				
+			} else if($context=="speaker-list"){
+				print '<div class="speaker-list col-sm-6 col-md-3 col-lg-3">';
+				
+			} else {
+				print '<div class="speaker-short-bio">';
+				
+			}
+			
             print '<div class="speaker-info">';
            
             
@@ -49,7 +59,7 @@
             print '<div class="speaker-vitals">';
             print '<a href="'.$permalink.'">';
 			print '<strong>'.@$speaker_name."</strong></a><br>";
-			if(@$speaker_title){
+			if(@$speaker_title && @$context != "speaker-list"){
 				print @$speaker_title.",<br>";
 			}
 			if(@$speaker_company){
@@ -85,7 +95,10 @@
             </div>";
 			if(@$context == 'long'){
                 print wpautop($content);
-            } else if(@$context == 'short'){
+            } else if(@$context=="speaker-list"){
+				//print '<div style="clear:both;width:100%;"></div>';
+			//	print "SESSION:".$session;
+			} else if(@$context == 'short'){
                print wpautop($excerpt);
             } else{
                 
@@ -94,10 +107,35 @@
         }
         function speakerList($speakers){
             $speaker_list = array();
-            foreach($speakers as $key=>$speaker_id){
-                array_push($speaker_list,getSpeaker($speaker_id));
+           
+			foreach($speakers as $key=>$speaker){
+				array_push($speaker_list,getSpeaker($speaker));
+				
             }
             return $speaker_list;
-        }
+		}
+		
+
+		function getSpeakers(){
+			global $wpdb;
+			$q = $wpdb->get_results("
+			select ID
+			from wp_posts
+			where post_status = 'publish' 
+			and post_type = 'speaker'
+			order by menu_order
+				");
+			$speaker_list = array();
+			foreach($q as $key=>$value){
+				array_push($speaker_list,getSpeaker($value->ID));
+				
+            }
+				
+			return $speaker_list;
+
+		}
+
+
+		
 
 ?>

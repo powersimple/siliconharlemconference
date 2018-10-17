@@ -20,12 +20,35 @@ DO NOT EDIT IN STYLE.CSS
 @import "partials/header";
 @import "partials/main";
 @import "partials/speakers";
+@import "partials/sponsors";
 @import "partials/slick";
 @import "partials/lava";
 @import "partials/particles";
+h2.module-title{
+    font-weight: 900;
+    font-size:400%;
+    color:#0090D1
+}
+h3.section-head{
+    font-weight:bold;
+    color:#a057a2;
+    text-align:center;
+    font-size:150%;
+}
+h4.section-prime {
+    font-weight: bold;
+    border-bottom:3px dashed #f58669;
+    padding-bottom:1em;
+    margin-bottom:1em;
+    text-align:center;
+    font-size:120%;
+    color:#419B4E;
+}
+
+
 .caption-content a.btn{
     font-size:1vw;
-    text-shadow: 1px 1px #333;
+    text-shadow: 1px 1px #000;
     @media(max-width:767px){
         max-width:90%;
         word-wrap: break-word;
@@ -33,6 +56,14 @@ DO NOT EDIT IN STYLE.CSS
 }
 .panel-group {
     margin-bottom: 0px;
+    border-color:none;
+}
+.panel-title{
+    font-size:1em;
+}
+.panel-default {
+    border-color:none;
+border-radius:25px !important;
 }
 .session-time, .mobile-sesion.time{
     float: right;
@@ -53,10 +84,14 @@ DO NOT EDIT IN STYLE.CSS
         display:none;
     }
 }
-
+.module{
+    padding-top:70px;
+}
 
 .panel-default>.panel-heading{
     color:#ccc;
+    padding:2em;
+    font-size:150%;
     background: linear-gradient(to top, #8c002e 0%,#a90329 51%,#c40327 100%);
     border-color: #8c002e;
     h4 a, h4 a.collapsed{
@@ -74,8 +109,11 @@ DO NOT EDIT IN STYLE.CSS
 }
 .panel-body{
     p{
-        font-size:120%;
+        font-size:150%;
         padding-right:20px;
+        @media(max-width:1280px){
+            clear:left;
+        }
        }
 }
 .session-sponsors{
@@ -88,9 +126,54 @@ DO NOT EDIT IN STYLE.CSS
     width:20%;
     padding-right:1%;
     text-align: center;
+    
     img{
         border-radius:50%;
     }
 }
 
+a.cta{
+    
+    text-align:center;
+    margin:3em auto 1em;
+    color:#fff;
+    font-weight:900;
+    display:block; 
+        display: block;
+        background-size: cover;
+        
+        
+        line-height: 150%;
+        transition: all .2s ease-in-out;
+        
+}
+a.register {
+    background: url(/wp-content/uploads/2018/10/blue-aqua.png) center center no-repeat;
+    width: 303px;
+    height: 199px;
+    padding: 2em 0px;
+font-size: 200%;
+}
 
+a.sponsor {
+    background: url(/wp-content/uploads/2018/10/red-pink.png) center center no-repeat;
+    width: 539px;
+    height: 387px;
+    padding:9em 1em 0px;
+    font-size: 150%;
+    max-width: 100%;
+
+    span {
+        font-size: 150%;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 0.5em;
+    }
+}
+a.cta:hover{
+    
+        transform: scale(1.5);
+}
+.section-foot{
+    margin:50px 0px;
+}

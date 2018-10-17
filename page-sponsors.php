@@ -1,7 +1,6 @@
-<section class="module">
-          <div class="container">
+
           <h2 class="font-alt module-title"><?php echo $title?></h2>
-            <div class="row multi-columns-row post-columns">
+            <div class="sponsors row multi-columns-row post-columns">
                 <?php
                     displaySponsors(getSponsorLevel('Terrabit'));
                     displaySponsors(getSponsorLevel('Gigabit'));
@@ -23,5 +22,5 @@
 
 
             </div>
-    </div>
-</section>
+
+

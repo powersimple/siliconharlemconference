@@ -48,14 +48,7 @@ $slow:15s;
   overflow:hidden;
 }
 
-.goop {
-  background:url(http://conference.siliconharlem.net/wp-content/uploads/2018/10/pink-to-peachgradient.jpg); 
-  width:100%;
-  height:50px;
-  position:absolute;
-  border-radius:50%;
-  filter:blur($lavablur);
-}
+
 .top-goop {
   top:-25px;
 }
@@ -79,7 +72,7 @@ $slow:15s;
   height:80px;
   width:80px;
    @include blobanimator(from-bottom, $fast);
-background: linear-gradient(top,#008ed0 0%,#00ac98 100%); 
+background: linear-gradient(to top,#008ed0 0%,#00ac98 100%); 
   background-size:contain;
 }
 .blob:nth-of-type(2) {
@@ -101,7 +94,7 @@ background: linear-gradient(to bottom, #eb008b 0%,#fcbf7c 100%);
   right:30px;
    @include blobanimator1(from-top, $slow);
   top:-80px;
-  background:linear-gradient(top,#008ed0 0%,#00ac98 100%); 
+  background:linear-gradient(to top,#008ed0 0%,#00ac98 100%); 
   background-size:contain;
 }
 .blob:nth-of-type(4){
@@ -111,7 +104,7 @@ background: linear-gradient(to bottom, #eb008b 0%,#fcbf7c 100%);
    @include blobanimator(from-top, $med);
   top:-80px;
   animation-delay:3s;
-  background: linear-gradient(top,#008ed0 0%,#00ac98 100%); 
+  background: linear-gradient(to top,#008ed0 0%,#00ac98 100%); 
   background-size:contain;
 }
 .blob:nth-of-type(5){
@@ -121,7 +114,7 @@ background: linear-gradient(to bottom, #eb008b 0%,#fcbf7c 100%);
    @include blobanimator(from-bottom, $slow);
   bottom:-80px;
   animation-delay:3s;
-  background: linear-gradient(top,#00adee  0%,#5cbb6a 100%); 
+  background: linear-gradient(to top,#00adee  0%,#5cbb6a 100%); 
 }
 .blob:nth-of-type(5){
   height:6vw;

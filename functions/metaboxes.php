@@ -21,6 +21,16 @@ function selectScreenImage( $meta_boxes ) {
 				'options' => array(),
 				'attributes' => array(),
 			),
+			array(
+				'id' => 'section_foot',
+				'type' => 'image_advanced',
+				'name' => esc_html__( 'section-foot-bg', 'metabox-online-generator' ),
+				'desc' => esc_html__( 'Appears at bottom of section', 'metabox-online-generator' ),
+				'force_delete' => false,
+				'max_file_uploads' => '1',
+				'options' => array(),
+				'attributes' => array(),
+			),
 		),
 	);
 
