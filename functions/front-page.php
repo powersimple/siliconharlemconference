@@ -13,11 +13,11 @@ get_header();
 
           <ul class="slides">
           <?php
-          
     $slides = get_slides($post->ID);
     foreach ($slides as $key => $media_id) {
        $src= wp_get_attachment_image_src( $media_id,"Full");
        //var_dump($src);//var_dump(get_media_data($media_id));
+
         extract((array) get_media_data($media_id));
         ?>
 
@@ -25,19 +25,15 @@ get_header();
             <li class="bg-dark-30 bg-dark" style="background-image:url(<?php echo $src[0];?>);">
               <div class="titan-caption">
                 <div class="caption-content">
-                 <div class="font-alt mb-30 titan-title-size-2">RE/THINK</div>
+                  <div class="font-alt mb-30 titan-title-size-2">RE/THINK</div>
                   <div class="font-alt mb-40 titan-title-size-4"><?php echo $title?></div><a class="section-scroll btn btn-border-w btn-round" href="#about"><?php echo $caption?></a>
-
                 </div>
               </div>
             </li>
             <?php
             }
           ?>
-
-
           </ul>
-          
         </div>
       </section>
       <main class="main">

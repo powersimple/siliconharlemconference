@@ -5,7 +5,7 @@
                     displaySponsors(getSponsorLevel('Terrabit'));
                     displaySponsors(getSponsorLevel('Gigabit'));
                     displaySponsors(getSponsorLevel('Megabit'));
-                    
+                    displaySponsors(getSponsorLevel('Community'));
 
                     ?>
 

@@ -63,6 +63,11 @@ function setSessionDetails( $meta_boxes ) {
 				'name' => esc_html__( 'Session Ends', 'metabox-online-generator' ),
 				'type' => 'time',
 			),
+			array(
+				'id' => 'video_embed_url',
+				'type' => 'url',
+				'name' => esc_html__( 'Video Embed URL', 'metabox-online-generator' ),
+			),
 		),
 	);
 
@@ -224,6 +229,8 @@ function setSponsors( $meta_boxes ) {
 	return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'setSponsors' );
+
+
 
 
 ?>

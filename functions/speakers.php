@@ -33,7 +33,7 @@
 			return $speaker;
 
 		}
-		function displaySpeaker($speaker_data,$media_size,$context="none",$session=''){
+		function displaySpeaker($speaker_data,$media_size,$context="none"){
 			extract($speaker_data);
 			$src= getThumbnail($thumbnail,$media_size);
 			if($context=="long"){
@@ -47,7 +47,7 @@
 				
 			}
 			
-            print '<div class="speaker-info">';
+            print '<div class="speaker-info col-sm-12 col-md-6 col-lg-6">';
            
             
 			if($src != ""){
@@ -99,7 +99,9 @@
 				//print '<div style="clear:both;width:100%;"></div>';
 			//	print "SESSION:".$session;
 			} else if(@$context == 'short'){
-               print wpautop($excerpt);
+				 print '<div class="speaker-excerpt col-sm-12 col-md-6 col-lg-6">';
+			   print wpautop($excerpt);
+			    print '</div>';
             } else{
                 
             }

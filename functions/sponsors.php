@@ -1,23 +1,25 @@
 <?php
-    function displaySponsors($sponsors){
-        $count = count($sponsors);
-        $grid = '';
-        if($count == 4){
-            $grid = 'col-sm-6 col-md-3 col-lg-3';
-        } else if($count == 3){
-            $grid = 'col-sm-6 col-md-4 col-lg-4';
 
-        } else {
-            $grid = 'col-md-6 col-lg-6';
-
+    function sponsorGridLevel($sponsor_level){
+        if($sponsor_level == 'Terrabit' || $sponsor_level == 'Gigabit'){
+            return 'col-sm-12 col-md-6 col-lg-6';
+        } else if($sponsor_level == 'Megabit'){
+             return 'col-sm-6 col-md-4 col-lg-4';
+        } else{
+            return 'col-sm-6 col-md-3 col-lg-3';
         }
+    }
+
+
+    function displaySponsors($sponsors){
+        
 
 
 
         foreach($sponsors as $key => $sponsor){
             extract( $sponsor);
             //var_dump($sponsor);
-            print '<div class="'.$grid.' sponsor '.strtolower($sponsor_level).'">';
+            print '<div class="'.sponsorGridLevel($sponsor_level).' sponsor '.strtolower($sponsor_level).'">';
             $src= getThumbnail($thumbnail,"Full");
             print '<a href="'.$sponsor_url.'">';
             if($src == ''){
@@ -98,7 +100,7 @@
          $src= getThumbnail($thumbnail,"thumbnail");
         
     
-     //   print '<a class="sponsor '.strtolower($sponsor_level).'" href="'.$sponsor_url.'" target="blank">';
+        print '<a class="" href="'.$sponsor_url.'" target="blank">';
         if($src != ''){
             print '<img class="sponsor '.strtolower($sponsor_level).'" src="'.$src.'" alt="'.$sponsor_name.'">';
         } else {

@@ -19,6 +19,9 @@ DO NOT EDIT IN STYLE.CSS
 
 @import "partials/header";
 @import "partials/main";
+@import "partials/hero";
+@import "partials/video";
+@import "partials/schedule";
 @import "partials/speakers";
 @import "partials/sponsors";
 @import "partials/slick";
@@ -101,6 +104,13 @@ border-radius:25px !important;
     }
     .speaker-name{
         color:#ccc;
+    }
+    a{
+        display:inline;
+
+    }
+    a:hover{
+        text-decoration:underline;
     }
 }
 

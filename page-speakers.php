@@ -9,7 +9,7 @@
     $speakers = getSpeakers();
     foreach($speakers as $key => $speaker){
         
-        displaySpeaker($speaker,"thumbnail","speaker-list",$speaker_session[$speaker['id']]);
+        displaySpeaker($speaker,"thumbnail","speaker-list");
     }
               ?>
 

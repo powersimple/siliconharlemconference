@@ -1,5 +1,5 @@
 <h2 class="font-alt module-title"><?php echo $title?></h2>
- <div class="panel-group" id="accordion">
+ <div class="playlist-group" id="accordion">
 <?php
     $sessions = getSessions($id);
     $speaker_session = array();
@@ -29,7 +29,7 @@
                       }
 
                     foreach($speaker_list as $key=>$speaker){
-                      print $id = $speaker['id'];
+                      $id = $speaker['id'];
                      $speaker_session[$id] = $title;
                       if(($key == count($speaker_list)-1) && ($key != 0)){
                         print " and ";
@@ -57,7 +57,7 @@
                             <div class="speaker-listing">
                            <?php
                           
-                             displaySpeaker($speaker,"thumbnail","short");
+                            displaySpeaker($speaker,"thumbnail","short");
                               print "</div>";
                         }
                         if(count($sponsors)){
