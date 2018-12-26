@@ -11,11 +11,11 @@
 				extract((array) $q);
 			$speaker = array(
 				"id" => $speaker_id,
-				"speaker_name" =>$post_title,
-				"content" => $post_content,
-				"excerpt" => $post_excerpt,
+				"speaker_name" =>@$post_title,
+				"content" => @$post_content,
+				"excerpt" => @$post_excerpt,
 				
-				"slug" => $post_name,
+				"slug" => @$post_name,
 				"speaker_title" => get_post_meta($speaker_id,"speaker_title",true),
 				"speaker_company" => get_post_meta($speaker_id,"speaker_company",true),
 				"speaker_website" => get_post_meta($speaker_id,"speaker_website",true),
@@ -26,7 +26,7 @@
 				"speaker_flickr" => get_post_meta($speaker_id,"speaker_flickr",true),
 				"speaker_instagram" => get_post_meta($speaker_id,"speaker_instagram",true),
 				
-                "thumbnail" => get_post_thumbnail_id($ID),
+                "thumbnail" => get_post_thumbnail_id(@$ID),
                 "permalink" => get_permalink($speaker_id)
 			);
 			
