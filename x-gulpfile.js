@@ -1,5 +1,6 @@
-var localhost = 'http://siliconharlemconf..192.168.1.245.xip.io:8886' // SET local dev url here
-
+//var localhost = 'http://siliconharlemconf.192.168.1.245.xip.io:8886' // SET local dev url here
+//var localhost = 'http://siliconharlemconf.172.20.10.4.xip.io:8886'
+var localhost = 'http://siliconharlemconf:8886'
 
 var gulp = require('gulp'),
   sass = require('gulp-ruby-sass'),
@@ -18,7 +19,7 @@ var gulp = require('gulp'),
 
   browserSync = require('browser-sync').create(),
   del = require('del')
-
+//Trans4mation@#
 // Styles
 gulp.task('styles', function () {
   return sass('app/sass/styles.scss', { style: 'compact' }).on('error', function (err) {
