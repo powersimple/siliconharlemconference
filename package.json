@@ -23,7 +23,7 @@
     "browser-sync": "^2.23.5",
     "del": "^3.0.0",
     "eyeglass": "^1.4.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cache": "^1.0.2",
     "gulp-clean-css": "^3.9.2",
