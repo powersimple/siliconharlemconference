@@ -20,7 +20,7 @@
   "homepage": "https://github.com/powersimple/siliconharlemconference#readme",
   "devDependencies": {
     "@gulp-sourcemaps/identity-map": "github:gulp-sourcemaps/identity-map",
-    "browser-sync": "^2.23.5",
+    "browser-sync": "^2.27.10",
     "del": "^3.0.0",
     "eyeglass": "^1.4.1",
     "gulp": "^3.9.1",
